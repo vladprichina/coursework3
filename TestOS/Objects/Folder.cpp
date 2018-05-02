@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Header.h"
+#include "../stdafx.h"
+#include "../Header.h"
 #include "BaseObject.h"
 #include "Folder.h"
 

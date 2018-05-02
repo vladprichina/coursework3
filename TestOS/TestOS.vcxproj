@@ -147,23 +147,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BaseObject.h" />
-    <ClInclude Include="File.h" />
-    <ClInclude Include="Folder.h" />
     <ClInclude Include="Header.h" />
-    <ClInclude Include="intrusive_ptr.h" />
-    <ClInclude Include="Link.h" />
-    <ClInclude Include="ref_counter.h" />
+    <ClInclude Include="Objects\BaseObject.h" />
+    <ClInclude Include="Objects\File.h" />
+    <ClInclude Include="Objects\Folder.h" />
+    <ClInclude Include="Objects\Link.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SmartPointers\intrusive_ptr.h" />
+    <ClInclude Include="SmartPointers\ref_counter.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TestOS.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BaseObject.cpp" />
-    <ClCompile Include="File.cpp" />
-    <ClCompile Include="Folder.cpp" />
-    <ClCompile Include="Link.cpp" />
+    <ClCompile Include="Objects\BaseObject.cpp" />
+    <ClCompile Include="Objects\File.cpp" />
+    <ClCompile Include="Objects\Folder.cpp" />
+    <ClCompile Include="Objects\Link.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

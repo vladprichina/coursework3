@@ -14,10 +14,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\Objects">
-      <UniqueIdentifier>{f2208347-8999-4384-8e82-05a339348b2e}</UniqueIdentifier>
+      <UniqueIdentifier>{5ed025d1-c2a6-4219-ac39-66bee976612b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Objects">
-      <UniqueIdentifier>{bd1b0066-2811-4e72-978d-fb9d07ef8e6e}</UniqueIdentifier>
+      <UniqueIdentifier>{356f0c2a-4d1d-446a-b8ed-f3fe80030e40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,22 +36,22 @@
     <ClInclude Include="Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BaseObject.h">
+    <ClInclude Include="Objects\BaseObject.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Folder.h">
+    <ClInclude Include="Objects\File.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="File.h">
+    <ClInclude Include="Objects\Folder.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Link.h">
+    <ClInclude Include="Objects\Link.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="intrusive_ptr.h">
+    <ClInclude Include="SmartPointers\intrusive_ptr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ref_counter.h">
+    <ClInclude Include="SmartPointers\ref_counter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,16 +62,16 @@
     <ClCompile Include="TestOS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseObject.cpp">
+    <ClCompile Include="Objects\BaseObject.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="File.cpp">
+    <ClCompile Include="Objects\File.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Folder.cpp">
+    <ClCompile Include="Objects\Folder.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Link.cpp">
+    <ClCompile Include="Objects\Link.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
   </ItemGroup>
