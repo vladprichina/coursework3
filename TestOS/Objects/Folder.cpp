@@ -34,15 +34,9 @@ float Folder::GetSize()
 
 void Folder::DeleteThis()
 {
+	RemoveChilds();
+
 	BaseObject::DeleteThis();
-
-	for (spBaseObject spSmart : m_vChilds)
-	{
-		BaseObject * pObj = spSmart.get();
-		pObj->DeleteThis();
-	}
-
-	m_vChilds.clear();
 }
 
 void Folder::AddChild(spBaseObject pChild)
@@ -62,7 +56,7 @@ void Folder::RemoveChilds()
 	for (spBaseObject spSmart : m_vChilds)
 	{
 		BaseObject * pObj = spSmart.get();
-		pObj->DeleteThis();
+		pObj->RemoveChilds();
 	}
 
 	m_vChilds.clear();

@@ -18,11 +18,12 @@ public:
 
 	virtual float GetSize() override;
 	virtual void  DeleteThis() override;
-	virtual bool IsOpen()								{ return true; }
+	virtual void  RemoveChilds() override;
+	virtual bool  IsOpen()								{ return true; }
+	virtual void  RemoveChild(spBaseObject pChild) override;
 
 	void AddChild(spBaseObject pChild);	
-	void RemoveChild(spBaseObject pChild);		
-	void RemoveChilds();						
+	
 
 	std::set < spBaseObject, sortObject> m_vChilds;
 };

@@ -176,6 +176,15 @@
     <ResourceCompile Include="TestOS.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resource\back.bmp" />
+    <Image Include="Resource\delete.bmp" />
+    <Image Include="Resource\file.bmp" />
+    <Image Include="Resource\folder.bmp" />
+    <Image Include="Resource\home.bmp" />
+    <Image Include="Resource\link.bmp" />
+    <Image Include="Resource\move.bmp" />
+    <Image Include="Resource\move2.bmp" />
+    <Image Include="Resource\rename.bmp" />
     <Image Include="small.ico" />
     <Image Include="TestOS.ico" />
   </ItemGroup>

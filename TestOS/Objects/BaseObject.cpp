@@ -13,6 +13,8 @@ BaseObject::~BaseObject()
 
 void BaseObject::DeleteThis()
 {
+	if (m_Parent)
+		m_Parent->RemoveChild(this);
 	m_Parent = NULL;
 }
 

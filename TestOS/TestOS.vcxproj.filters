@@ -87,5 +87,32 @@
     <Image Include="TestOS.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resource\back.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\delete.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\file.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\folder.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\home.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\link.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\move.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\move2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resource\rename.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
