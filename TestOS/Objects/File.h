@@ -5,18 +5,18 @@ class File : public BaseObject
 {
 public:
 	File() {}
-	File(const std::string & srName, const std::string & srIconName, const std::string & srAddName, float fSize);
+	File(const std::wstring & srName, const std::wstring & srIconName, const std::wstring & srAddName, float fSize);
 	virtual ~File();
 
 	//getters
-	virtual std::string GetAddName()							{ return m_srAddName; }
+	virtual std::wstring GetAddName()							{ return m_srAddName; }
 
 	//setters
-	void SetAddName( std::string newName )				{ m_srAddName = newName;}
+	void SetAddName( std::wstring newName )						{ m_srAddName = newName;}
 
-	virtual float GetSize() override					{ return m_fSize; }
+	virtual float GetSize() override							{ return m_fSize; }
 
 private:
-	std::string		m_srAddName;
-	float			m_fSize;
+	std::wstring		m_srAddName;
+	float				m_fSize;
 };

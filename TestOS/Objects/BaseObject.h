@@ -15,18 +15,18 @@ public:
 	virtual ~BaseObject();
 
 	//getters
-	const std::string & GetName()					{ return m_srName; }
-	const std::string & GetIconName()				{ return m_srIconName; }
-	std::string GetPath();
-	std::string GetExtName();
+	const std::wstring & GetName()					{ return m_srName; }
+	const std::wstring & GetIconName()				{ return m_srIconName; }
+	std::wstring GetPath();
+	std::wstring GetExtName();
 	BaseObject * GetParent()						{ return m_Parent; }
-	virtual std::string GetAddName()				{ return ""; }
-	virtual float GetSize()							{ return 0; }
+	virtual std::wstring GetAddName()				{ return L""; }
+	virtual float GetSize()							{ return 0.f; }
 	virtual bool IsOpen()							{ return false; }
 
 	//setters
-	void SetName(std::string newName)				{ m_srName = newName; }
-	void SetIconName(std::string newName)			{ m_srIconName = newName; }
+	void SetName(std::wstring newName)				{ m_srName = newName; }
+	void SetIconName(std::wstring newName)			{ m_srIconName = newName; }
 	void SetParent(spBaseObject newParent)			{ m_Parent = newParent.get(); }
 
 	//remove
@@ -35,7 +35,7 @@ public:
 	virtual void DeleteThis();
 
 protected:
-	std::string			m_srName;
-	std::string			m_srIconName;
-	BaseObject *		m_Parent;
+	std::wstring			m_srName;
+	std::wstring			m_srIconName;
+	BaseObject *			m_Parent;
 };

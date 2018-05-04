@@ -2,7 +2,7 @@
 #include "BaseObject.h"
 #include "File.h"
 
-File::File(const std::string & srName, const std::string & srIconName, const std::string & srAddName, float fSize)
+File::File(const std::wstring & srName, const std::wstring & srIconName, const std::wstring & srAddName, float fSize)
 {
 	m_srName = srName;
 	m_srIconName = srIconName;

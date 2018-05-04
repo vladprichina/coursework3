@@ -18,22 +18,22 @@ void BaseObject::DeleteThis()
 	m_Parent = NULL;
 }
 
-std::string BaseObject::GetPath()
+std::wstring BaseObject::GetPath()
 {
-	std::string srPath;
+	std::wstring srPath;
 
 	if (m_Parent)
 	{
 		srPath = m_Parent->GetPath();
-		srPath += " / ";
+		srPath += L" / ";
 	}
 	srPath += m_srName;
 	return srPath;
 }
 
-std::string BaseObject::GetExtName()
+std::wstring BaseObject::GetExtName()
 {
-	std::string srFullName = GetName();
+	std::wstring srFullName = GetName();
 	if (!GetAddName().empty())
 	{
 		srFullName += GetAddName();
