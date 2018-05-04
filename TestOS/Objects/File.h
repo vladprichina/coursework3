@@ -9,14 +9,13 @@ public:
 	virtual ~File();
 
 	//getters
-	virtual std::wstring GetAddName()							{ return m_srAddName; }
+	virtual float GetSize() override							{ return m_fSize; }
 
 	//setters
 	void SetAddName( std::wstring newName )						{ m_srAddName = newName;}
 
-	virtual float GetSize() override							{ return m_fSize; }
+	
 
 private:
-	std::wstring		m_srAddName;
 	float				m_fSize;
 };

@@ -1,12 +1,5 @@
 #pragma once
 
-enum eTypeLink
-{
-	eNone = 0,
-	eHard = 1,
-	eSymbol = 2,
-};
-
 DECLARE_SMART(BaseObject, spBaseObject);
 class BaseObject : public ref_counter
 {
@@ -20,9 +13,9 @@ public:
 	std::wstring GetPath();
 	std::wstring GetExtName();
 	BaseObject * GetParent()						{ return m_Parent; }
-	virtual std::wstring GetAddName()				{ return L""; }
 	virtual float GetSize()							{ return 0.f; }
-	virtual bool IsOpen()							{ return false; }
+	virtual spBaseObject IsOpen()					{ return nullptr; }
+	virtual std::wstring GetAddName()				{ return m_srAddName; }
 
 	//setters
 	void SetName(std::wstring newName)				{ m_srName = newName; }
@@ -34,8 +27,18 @@ public:
 	virtual void RemoveChilds()						{};
 	virtual void DeleteThis();
 
+	//links
+
+
 protected:
-	std::wstring			m_srName;
-	std::wstring			m_srIconName;
-	BaseObject *			m_Parent;
+	std::wstring				m_srName;
+	std::wstring				m_srIconName;
+	std::wstring				m_srAddName;
+	BaseObject *				m_Parent;
+
+	//TODO
+	//http://cppstudio.com/post/610/
+
+	//TODO
+	std::vector<spBaseObject>   m_vLinks;		 // все ссылки на данный объект
 };

@@ -61,3 +61,16 @@ void Folder::RemoveChilds()
 
 	m_vChilds.clear();
 }
+
+spBaseObject Folder::GetChild(const std::wstring & srName, const std::wstring & srAddName)
+{
+	auto iterFind = find_if(m_vChilds.begin(), m_vChilds.end(), [&](spBaseObject  pBase)
+	{
+		return pBase->GetName() == srName && pBase->GetAddName() == srAddName;
+	});
+
+	if (iterFind!= m_vChilds.end())
+		return *iterFind;
+
+	return nullptr;
+}

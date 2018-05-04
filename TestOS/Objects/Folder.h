@@ -17,12 +17,14 @@ public:
 	Folder(const std::wstring & srName, const std::wstring & srIconName);
 	virtual ~Folder();
 
-	virtual float GetSize() override;
-	virtual void  DeleteThis() override;
-	virtual void  RemoveChilds() override;
-	virtual bool  IsOpen()	override  { return true; }
-	virtual void  RemoveChild(spBaseObject pChild) override;
-	void AddChild(spBaseObject pChild);	
+	virtual float			GetSize() override;
+	virtual void			DeleteThis() override;
+	virtual void			RemoveChilds() override;
+	virtual spBaseObject	IsOpen() override								{ return this; }
+	virtual std::wstring	GetAddName()	override						{ return L""; }
+	virtual void			RemoveChild(spBaseObject pChild) override;
+	void					AddChild(spBaseObject pChild);	
+	spBaseObject			GetChild(const std::wstring & srName, const std::wstring & srAddName);
 	
 	std::set < spBaseObject, sortObject> m_vChilds;
 };
