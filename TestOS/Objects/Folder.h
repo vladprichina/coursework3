@@ -5,7 +5,7 @@ struct sortObject
 {
 	bool operator() (spBaseObject obj1, spBaseObject obj2)const
 	{
-		return obj1->GetName() < obj2->GetName();
+		return obj1->GetExtName() < obj2->GetExtName();
 	}
 };
 
@@ -13,7 +13,6 @@ DECLARE_SMART(Folder, spFolder);
 class Folder : public BaseObject
 {
 public:
-	Folder();
 	Folder(const std::wstring & srName, const std::wstring & srIconName);
 	virtual ~Folder();
 

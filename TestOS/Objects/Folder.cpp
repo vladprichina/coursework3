@@ -3,15 +3,13 @@
 #include "BaseObject.h"
 #include "Folder.h"
 
-Folder::Folder()
-{
-	m_srName = L"default_name";
-}
 
 Folder::Folder(const std::wstring & srName, const std::wstring & srIconName)
 {
 	m_srName = srName;
 	m_srIconName = srIconName;
+
+	BaseObject::BaseObject();
 }
 
 Folder::~Folder()

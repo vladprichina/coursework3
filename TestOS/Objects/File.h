@@ -15,7 +15,6 @@ public:
 	void SetAddName( std::wstring newName )						{ m_srAddName = newName;}
 
 	
-
 private:
 	float				m_fSize;
 };

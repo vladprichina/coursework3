@@ -11,15 +11,16 @@ DECLARE_SMART(Link, spLink);
 class Link : public BaseObject
 {
 public:
-	Link();
 	Link(std::wstring srName, eTypeLink eType, spBaseObject pRef );
 	virtual~Link();
 
 	virtual float			GetSize() override;
-	virtual spBaseObject	IsOpen()  override { return m_pRefObject->IsOpen(); }
+	virtual spBaseObject	IsOpen()  override;
+	virtual void			DeleteThis() override;
+	virtual void			SetLink(spBaseObject pRef)			{ m_pRefObject = pRef; }
 
 private:
-	spBaseObject		m_pRefObject;		// объект, на который ссылаемся
-	eTypeLink			m_eLinkType;
+	spBaseObject			m_pRefObject;		// объект, на который ссылаемся
+	eTypeLink				m_eLinkType;
 };
 

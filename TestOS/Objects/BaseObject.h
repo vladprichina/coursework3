@@ -16,29 +16,31 @@ public:
 	virtual float GetSize()							{ return 0.f; }
 	virtual spBaseObject IsOpen()					{ return nullptr; }
 	virtual std::wstring GetAddName()				{ return m_srAddName; }
+	std::wstring GetTimeCreate();
+	std::wstring GetTimeModify();
 
 	//setters
 	void SetName(std::wstring newName)				{ m_srName = newName; }
 	void SetIconName(std::wstring newName)			{ m_srIconName = newName; }
 	void SetParent(spBaseObject newParent)			{ m_Parent = newParent.get(); }
+	void SetModifyTime();
 
 	//remove
 	virtual void RemoveChild(spBaseObject pChild)   {};
 	virtual void RemoveChilds()						{};
 	virtual void DeleteThis();
-
+	
 	//links
-
+	void AddLink(spBaseObject newLink)				{ m_vLinks.push_back(newLink); }
+	void DeleteLink(spBaseObject pLink);
+	virtual void SetLink(spBaseObject pRef)			{};
 
 protected:
 	std::wstring				m_srName;
 	std::wstring				m_srIconName;
 	std::wstring				m_srAddName;
 	BaseObject *				m_Parent;
-
-	//TODO
-	//http://cppstudio.com/post/610/
-
-	//TODO
-	std::vector<spBaseObject>   m_vLinks;		 // все ссылки на данный объект
+	std::vector<spBaseObject>	m_vLinks;		 // все ссылки на данный объект
+	struct tm					m_pTimeCreate;
+	struct tm					m_pTimeModify;
 };
