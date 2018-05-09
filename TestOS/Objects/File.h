@@ -10,10 +10,6 @@ public:
 
 	//getters
 	virtual float GetSize() override							{ return m_fSize; }
-
-	//setters
-	void SetAddName( std::wstring newName )						{ m_srAddName = newName;}
-
 	
 private:
 	float				m_fSize;

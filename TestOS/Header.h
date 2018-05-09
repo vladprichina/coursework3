@@ -16,5 +16,5 @@ using namespace std;
 #define typeSLink L".link"		// расширение ссылки
 #define typeHLink L".hlink"		// расширение жесткой ссылки(удаляет объект вместе с ссылкой)
 
-#define VRN (+3)	// часовой пояс Воронежа  
+#define VRN (+3)				// часовой пояс Воронежа  
 #define START_YEAR 1900
